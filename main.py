@@ -99,13 +99,12 @@ plt.ylabel('Deviance')
 fig.tight_layout()
 plt.show()
 
-# params = {'n_estimators': 3,'max_depth': 3,'learning_rate': 1,'criterion': 'mse'}
-# gbm = GradientBoostingRegressor(**params)
-# gbm.fit(x_train,y_train)
-#
-# plt.figure(figsize=(12,6))
-# # plt.scatter(x_train, y_train)
-# plt.plot(x_test, gbm.predict(x_test), color='black')
-# plt.show()
+params = {'n_estimators': 3,'max_depth': 3,'learning_rate': 1,'criterion': 'mse'}
+gbm = GradientBoostingRegressor(**params)
+gbm.fit(x_train,y_train)
+plt.figure(figsize=(12,6))
+# plt.scatter(x_train, y_train)
+plt.plot(x_test, gbm.predict(x_test), color='black')
+plt.show()
 
-# result.to_csv('result.csv')
+
